@@ -34,8 +34,8 @@ export default class Create extends Command {
         },
       },
       {
-        title: 'Sleep 10 seconds',
-        task: async () => cli.wait(10000),
+        title: 'Sleep 60 seconds',
+        task: async () => cli.wait(60000),
       },
       {
         title: 'Fecth stack info',
