@@ -1,12 +1,12 @@
-@itinerisltd/wpom
+@itinerisltd/wpom-cli
 =================
 
 Manage WP Offload Media Stack
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/@itinerisltd/wpom.svg)](https://npmjs.org/package/@itinerisltd/wpom)
-[![Downloads/week](https://img.shields.io/npm/dw/@itinerisltd/wpom.svg)](https://npmjs.org/package/@itinerisltd/wpom)
-[![License](https://img.shields.io/npm/l/@itinerisltd/wpom.svg)](https://github.com/itinerisltd/wpom/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/@itinerisltd/wpom-cli.svg)](https://npmjs.org/package/@itinerisltd/wpom-cli)
+[![Downloads/week](https://img.shields.io/npm/dw/@itinerisltd/wpom-cli.svg)](https://npmjs.org/package/@itinerisltd/wpom-cli)
+[![License](https://img.shields.io/npm/l/@itinerisltd/wpom-cli.svg)](https://github.com/itinerisltd/wpom/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
