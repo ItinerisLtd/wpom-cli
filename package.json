@@ -1,0 +1,64 @@
+{
+  "name": "@itinerisltd/wpom-cli",
+  "description": "Manage WP Offload Media Stack",
+  "version": "0.0.0",
+  "author": "Tang Rufus @TangRufus",
+  "bin": {
+    "wpom": "./bin/run"
+  },
+  "bugs": "https://github.com/itinerisltd/wpom/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "cli-ux": "^4.9.3",
+    "listr": "^0.14.3",
+    "node-fetch": "^2.3.0",
+    "np": "^3.0.4",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/tslint": "^3",
+    "@types/chai": "^4",
+    "@types/listr": "^0.13.0",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "@types/node-fetch": "^2.1.4",
+    "globby": "^8",
+    "ts-node": "^7",
+    "tslint": "^5",
+    "typescript": "^3.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/itinerisltd/wpom",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "wpom",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "itinerisltd/wpom",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
