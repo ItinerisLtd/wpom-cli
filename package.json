@@ -1,7 +1,7 @@
 {
   "name": "@itinerisltd/wpom-cli",
   "description": "Manage WP Offload Media Stack",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Tang Rufus @TangRufus",
   "bin": {
     "wpom": "./bin/run"

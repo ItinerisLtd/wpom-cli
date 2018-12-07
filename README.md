@@ -19,7 +19,7 @@ $ npm install -g @itinerisltd/wpom-cli
 $ wpom COMMAND
 running command...
 $ wpom (-v|--version|version)
-@itinerisltd/wpom-cli/0.1.3 darwin-x64 node-v10.13.0
+@itinerisltd/wpom-cli/0.1.4 darwin-x64 node-v10.13.0
 $ wpom --help [COMMAND]
 USAGE
   $ wpom COMMAND
@@ -49,7 +49,7 @@ OPTIONS
   -k, --key=key                    (required) api key
 ```
 
-_See code: [src/commands/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.3/src/commands/create.ts)_
+_See code: [src/commands/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.4/src/commands/create.ts)_
 
 ## `wpom help [COMMAND]`
 
@@ -83,7 +83,7 @@ OPTIONS
   -n, --name=name                  (required) stack name with prefix
 ```
 
-_See code: [src/commands/secret/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.3/src/commands/secret/create.ts)_
+_See code: [src/commands/secret/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.4/src/commands/secret/create.ts)_
 
 ## `wpom stack:create`
 
@@ -100,7 +100,7 @@ OPTIONS
   -k, --key=key                    (required) api key
 ```
 
-_See code: [src/commands/stack/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.3/src/commands/stack/create.ts)_
+_See code: [src/commands/stack/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.4/src/commands/stack/create.ts)_
 
 ## `wpom stack:info`
 
@@ -117,5 +117,5 @@ OPTIONS
   -n, --name=name                  (required) stack name with prefix
 ```
 
-_See code: [src/commands/stack/info.ts](https://github.com/itinerisltd/wpom/blob/v0.1.3/src/commands/stack/info.ts)_
+_See code: [src/commands/stack/info.ts](https://github.com/itinerisltd/wpom/blob/v0.1.4/src/commands/stack/info.ts)_
 <!-- commandsstop -->
