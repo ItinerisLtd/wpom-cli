@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.11](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.11) (2019-07-11)
+[Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.10...v0.2.11)
+
+**Merged pull requests:**
+
+- Fix: `Error: Cannot set property 'accessKey' of undefined` [\#25](https://github.com/ItinerisLtd/wpom-cli/pull/25) ([TangRufus](https://github.com/TangRufus))
+
 ## [v0.2.10](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.10) (2019-07-11)
 [Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.9...v0.2.10)
 
