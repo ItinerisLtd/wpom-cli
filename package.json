@@ -14,7 +14,7 @@
     "cli-ux": "^4.9.3",
     "listr": "^0.14.3",
     "node-fetch": "^2.3.0",
-    "np": "^3.0.4",
+    "np": "^5.0.3",
     "tslib": "^1"
   },
   "devDependencies": {
@@ -58,7 +58,8 @@
     "posttest": "tslint -p . -t stylish",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "npx @oclif/oclif-dev readme && git add README.md",
+    "release": "npx np && github_changelog_generator && git add CHANGELOG.md && git commit -m 'github_changelog_generator' && git push origin master"
   },
   "types": "lib/index.d.ts",
   "publishConfig": {
