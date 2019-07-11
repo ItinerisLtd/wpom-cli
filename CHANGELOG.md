@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.2.2](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.2) (2019-07-11)
+[Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.3...v0.2.2)
+
+## [v0.2.3](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.3) (2019-07-11)
+[Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.1...v0.2.3)
+
+**Merged pull requests:**
+
+- Update `tsconfig.json` [\#22](https://github.com/ItinerisLtd/wpom-cli/pull/22) ([TangRufus](https://github.com/TangRufus))
+- Bump globby from 8.0.1 to 10.0.1 [\#20](https://github.com/ItinerisLtd/wpom-cli/pull/20) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
 ## [v0.2.1](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.1) (2019-07-11)
 [Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.0...v0.2.1)
 

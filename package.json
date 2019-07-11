@@ -1,7 +1,7 @@
 {
   "name": "@itinerisltd/wpom-cli",
   "description": "Manage WP Offload Media Stack",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "author": "Tang Rufus @TangRufus",
   "bin": {
     "wpom": "./bin/run"
@@ -59,7 +59,7 @@
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
     "version": "npx @oclif/oclif-dev readme && git add README.md",
-    "release": "npx np && github_changelog_generator && git add CHANGELOG.md && git commit -m 'github_changelog_generator' && git push origin master"
+    "release": "npx np --any-branch && github_changelog_generator && git add CHANGELOG.md && git commit -m 'github_changelog_generator' && git push origin master"
   },
   "types": "lib/index.d.ts",
   "publishConfig": {
