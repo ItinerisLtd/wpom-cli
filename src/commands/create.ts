@@ -5,21 +5,32 @@ import * as Listr from 'listr'
 import {createAccessKey} from '../api/create-access-key'
 import {createStack} from '../api/create-stack'
 import {fetchInfo} from '../api/fetch-info'
+import commonFlags from '../common-flags'
 
 export default class Create extends Command {
-  static description = 'describe the command here'
+  static description = 'create CloudFormation stacks for WP Offload Media (with access keys)'
+
+  static examples = [
+    '$ wpom create --site-key my-awsome-site --endpoint-base https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key xxxyyyzzz',
+    '$ npx @itinerisltd/wpom-cli create --site-key my-awsome-site --endpoint-base https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key xxxyyyzzz',
+  ]
 
   static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    domainName: flags.string({char: 'd', description: 'domain name', required: true}),
-    endpointBase: flags.string({char: 'e', description: 'endpoint base, e.g: https://xxx.execute-api.yyy.amazonaws.com/dev]', required: true}),
-    key: flags.string({char: 'k', description: 'api key', required: true}),
+    ...commonFlags,
+    'site-key': flags.string({
+      char: 's',
+      description: 'site key, format: ^[a-z0-9\\-]+$, e.g: i-am-example-123',
+      env: 'WPOM_STACK_CREATE_SITE_KEY',
+      required: true,
+    }),
   }
 
   async run() {
     const {flags} = this.parse(Create)
-    const {endpointBase, domainName, key} = flags
+
+    const siteKey = flags['site-key']
+    const endpointBase = flags['endpoint-base']
+    const apiKey = flags['api-key']
 
     const result: any = {}
 
@@ -27,7 +38,7 @@ export default class Create extends Command {
       {
         title: 'Create stack',
         task: async ctx => {
-          const stack = await createStack(endpointBase, domainName, key)
+          const stack = await createStack(endpointBase, siteKey, apiKey)
           ctx.stackName = stack.StackName
           result.stackName = stack.StackName
           result.stack = stack
@@ -40,24 +51,30 @@ export default class Create extends Command {
       {
         title: 'Fecth stack info',
         task: async ctx => {
-          const info = await fetchInfo(endpointBase, ctx.stackName, key)
+          const info = await fetchInfo(endpointBase, ctx.stackName, apiKey)
           result.info = info
         }
       },
       {
-        title: 'Create user access key',
+        title: 'Create ProductionIAMUser access key',
         task: async ctx => {
-          const accessKey = await createAccessKey(endpointBase, ctx.stackName, key)
-          result.accessKey = accessKey
+          const accessKey = await createAccessKey(endpointBase, ctx.stackName, 'ProductionIAMUser', apiKey)
+          result.production.accessKey = accessKey
+        }
+      },
+      {
+        title: 'Create StagingIAMUser access key',
+        task: async ctx => {
+          const accessKey = await createAccessKey(endpointBase, ctx.stackName, 'StagingIAMUser', apiKey)
+          result.staging.accessKey = accessKey
         }
       },
     ])
 
     tasks.run().then(() => {
-      console.log(result)
+      this.log(result)
     }).catch((err: Error) => {
-      console.error(err)
-      this.exit(1)
+      this.error(err.message, {exit: 1})
     })
   }
 }
