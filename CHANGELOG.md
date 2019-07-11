@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.10](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.10) (2019-07-11)
+[Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.9...v0.2.10)
+
+**Merged pull requests:**
+
+- Wait: 60s --\> 120s [\#24](https://github.com/ItinerisLtd/wpom-cli/pull/24) ([TangRufus](https://github.com/TangRufus))
+
 ## [v0.2.9](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.9) (2019-07-11)
 [Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.8...v0.2.9)
 
