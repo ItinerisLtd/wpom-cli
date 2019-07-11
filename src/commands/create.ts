@@ -45,12 +45,13 @@ export default class Create extends Command {
         },
       },
       {
-        title: 'Sleep 60 seconds',
-        task: async () => cli.wait(60000),
+        title: 'Sleep 120 seconds',
+        task: async () => cli.wait(120000),
       },
       {
         title: 'Fecth stack info',
         task: async ctx => {
+          // TODO: Retry if fail.
           const info = await fetchInfo(endpointBase, ctx.stackName, apiKey)
           result.info = info
         }
