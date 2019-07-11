@@ -19,7 +19,7 @@ $ npm install -g @itinerisltd/wpom-cli
 $ wpom COMMAND
 running command...
 $ wpom (-v|--version|version)
-@itinerisltd/wpom-cli/0.2.7 darwin-x64 node-v10.16.0
+@itinerisltd/wpom-cli/0.2.8 darwin-x64 node-v10.16.0
 $ wpom --help [COMMAND]
 USAGE
   $ wpom COMMAND
@@ -54,7 +54,7 @@ EXAMPLES
   https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key xxxyyyzzz
 ```
 
-_See code: [src/commands/create.ts](https://github.com/itinerisltd/wpom-cli/blob/v0.2.7/src/commands/create.ts)_
+_See code: [src/commands/create.ts](https://github.com/itinerisltd/wpom-cli/blob/v0.2.8/src/commands/create.ts)_
 
 ## `wpom help [COMMAND]`
 
@@ -94,7 +94,7 @@ EXAMPLES
   https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key xxxyyyzzz
 ```
 
-_See code: [src/commands/stack/create.ts](https://github.com/itinerisltd/wpom-cli/blob/v0.2.7/src/commands/stack/create.ts)_
+_See code: [src/commands/stack/create.ts](https://github.com/itinerisltd/wpom-cli/blob/v0.2.8/src/commands/stack/create.ts)_
 
 ## `wpom stack:info`
 
@@ -117,5 +117,5 @@ EXAMPLES
   https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key xxxyyyzzz
 ```
 
-_See code: [src/commands/stack/info.ts](https://github.com/itinerisltd/wpom-cli/blob/v0.2.7/src/commands/stack/info.ts)_
+_See code: [src/commands/stack/info.ts](https://github.com/itinerisltd/wpom-cli/blob/v0.2.8/src/commands/stack/info.ts)_
 <!-- commandsstop -->
