@@ -60,14 +60,18 @@ export default class Create extends Command {
         title: 'Create ProductionIAMUser access key',
         task: async ctx => {
           const accessKey = await createAccessKey(endpointBase, ctx.stackName, 'ProductionIAMUser', apiKey)
-          result.production.accessKey = accessKey
+          result.production = {
+            accessKey,
+          }
         }
       },
       {
         title: 'Create StagingIAMUser access key',
         task: async ctx => {
           const accessKey = await createAccessKey(endpointBase, ctx.stackName, 'StagingIAMUser', apiKey)
-          result.staging.accessKey = accessKey
+          result.staging = {
+            accessKey,
+          }
         }
       },
     ])
