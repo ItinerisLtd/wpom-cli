@@ -52,7 +52,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "itinerisltd/wpom",
+  "repository": "github:itinerisltd/wpom-cli",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "tslint -p . -t stylish",
