@@ -1,5 +1,8 @@
 # Change Log
 
+## [v0.2.1](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.1) (2019-07-11)
+[Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.0...v0.2.1)
+
 ## [v0.2.0](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.0) (2019-07-11)
 [Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.1.4...v0.2.0)
 
