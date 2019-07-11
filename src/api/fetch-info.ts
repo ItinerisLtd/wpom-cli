@@ -14,31 +14,9 @@ export const fetchInfo = async (endpointBase: string, stackName: string, apiKey:
   if (! response.ok) {
     const err = new Error()
     err.name = response.statusText
-    err.message = json
+    err.message = JSON.stringify(json, null, 2)
     throw err
   }
 
-  const {Distribution, S3Bucket, IAMUser} = json
-
-  const {Id: DistributionId,
-    Status: DistributionStatus,
-    DomainName: DistributionDomainName,
-  } = Distribution
-  const cloudfront = {DistributionId, DistributionStatus, DistributionDomainName}
-
-  const {PhysicalResourceId: BucketId,
-    ResourceStatus: BucketStatus,
-  } = S3Bucket.StackResourceDetail
-  const bucket = {BucketId, BucketStatus}
-
-  const {PhysicalResourceId: UserId,
-    ResourceStatus: UserStatus,
-  } = IAMUser.StackResourceDetail
-  const user = {UserId, UserStatus}
-
-  return {
-    ...bucket,
-    ...user,
-    ...cloudfront,
-  }
+  return json
 }

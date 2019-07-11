@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-export const createStack = async (endpointBase: string, domainName: string, apiKey: string) => {
+export const createStack = async (endpointBase: string, siteKey: string, apiKey: string) => {
   const response = await fetch(`${endpointBase}/stacks`, {
     method: 'POST',
     headers: {
@@ -8,7 +8,7 @@ export const createStack = async (endpointBase: string, domainName: string, apiK
       'x-api-key': apiKey,
     },
     body: JSON.stringify({
-      domainName
+      name: siteKey,
     }),
   }).then(response => response)
 
@@ -17,7 +17,7 @@ export const createStack = async (endpointBase: string, domainName: string, apiK
   if (! response.ok) {
     const err = new Error()
     err.name = response.statusText
-    err.message = json
+    err.message = JSON.stringify(json, null, 2)
     throw err
   }
 

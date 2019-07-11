@@ -6,7 +6,7 @@
   "bin": {
     "wpom": "./bin/run"
   },
-  "bugs": "https://github.com/itinerisltd/wpom/issues",
+  "bugs": "https://github.com/itinerisltd/wpom-cli/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -39,7 +39,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/itinerisltd/wpom",
+  "homepage": "https://github.com/itinerisltd/wpom-cli",
   "keywords": [
     "oclif"
   ],

@@ -19,7 +19,7 @@ $ npm install -g @itinerisltd/wpom-cli
 $ wpom COMMAND
 running command...
 $ wpom (-v|--version|version)
-@itinerisltd/wpom-cli/0.1.4 darwin-x64 node-v10.13.0
+@itinerisltd/wpom-cli/0.1.4 darwin-x64 node-v10.16.0
 $ wpom --help [COMMAND]
 USAGE
   $ wpom COMMAND
@@ -30,23 +30,28 @@ USAGE
 <!-- commands -->
 * [`wpom create`](#wpom-create)
 * [`wpom help [COMMAND]`](#wpom-help-command)
-* [`wpom secret:create`](#wpom-secretcreate)
 * [`wpom stack:create`](#wpom-stackcreate)
 * [`wpom stack:info`](#wpom-stackinfo)
 
 ## `wpom create`
 
-describe the command here
+create CloudFormation stacks for WP Offload Media (with access keys)
 
 ```
 USAGE
   $ wpom create
 
 OPTIONS
-  -d, --domainName=domainName      (required) domain name
-  -e, --endpointBase=endpointBase  (required) endpoint base, e.g: https://xxx.execute-api.yyy.amazonaws.com/dev]
-  -h, --help                       show CLI help
-  -k, --key=key                    (required) api key
+  -e, --endpoint-base=endpoint-base  (required) endpoint base, e.g: https://xxx.execute-api.yyy.amazonaws.com/zzz]
+  -h, --help                         show CLI help
+  -k, --api-key=api-key              (required) api key
+  -s, --site-key=site-key            (required) site key, format: ^[a-z0-9\-]+$, e.g: i-am-example-123
+
+EXAMPLES
+  $ wpom create --site-key my-awsome-site --endpoint-base https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key 
+  xxxyyyzzz
+  $ npx @itinerisltd/wpom-cli create --site-key my-awsome-site --endpoint-base 
+  https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key xxxyyyzzz
 ```
 
 _See code: [src/commands/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.4/src/commands/create.ts)_
@@ -66,55 +71,50 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.4/src/commands/help.ts)_
-
-## `wpom secret:create`
-
-describe the command here
-
-```
-USAGE
-  $ wpom secret:create
-
-OPTIONS
-  -e, --endpointBase=endpointBase  (required) endpoint base, e.g: https://xxx.execute-api.yyy.amazonaws.com/dev]
-  -h, --help                       show CLI help
-  -k, --key=key                    (required) api key
-  -n, --name=name                  (required) stack name with prefix
-```
-
-_See code: [src/commands/secret/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.4/src/commands/secret/create.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.0/src/commands/help.ts)_
 
 ## `wpom stack:create`
 
-describe the command here
+create CloudFormation stacks for WP Offload Media (without access keys)
 
 ```
 USAGE
   $ wpom stack:create
 
 OPTIONS
-  -d, --domainName=domainName      (required) domain name
-  -e, --endpointBase=endpointBase  (required) endpoint base, e.g: https://xxx.execute-api.yyy.amazonaws.com/dev]
-  -h, --help                       show CLI help
-  -k, --key=key                    (required) api key
+  -e, --endpoint-base=endpoint-base  (required) endpoint base, e.g: https://xxx.execute-api.yyy.amazonaws.com/zzz]
+  -h, --help                         show CLI help
+  -k, --api-key=api-key              (required) api key
+  -s, --site-key=site-key            (required) site key, format: ^[a-z0-9\-]+$, e.g: i-am-example-123
+
+EXAMPLES
+  $ wpom stack:create --site-key my-awsome-site --endpoint-base https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key 
+  xxxyyyzzz
+  $ npx @itinerisltd/wpom-cli stack:create --site-key my-awsome-site --endpoint-base 
+  https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key xxxyyyzzz
 ```
 
 _See code: [src/commands/stack/create.ts](https://github.com/itinerisltd/wpom/blob/v0.1.4/src/commands/stack/create.ts)_
 
 ## `wpom stack:info`
 
-describe the command here
+show CloudFormation stack information
 
 ```
 USAGE
   $ wpom stack:info
 
 OPTIONS
-  -e, --endpointBase=endpointBase  (required) endpoint base, e.g: https://xxx.execute-api.yyy.amazonaws.com/dev]
-  -h, --help                       show CLI help
-  -k, --key=key                    (required) api key
-  -n, --name=name                  (required) stack name with prefix
+  -e, --endpoint-base=endpoint-base  (required) endpoint base, e.g: https://xxx.execute-api.yyy.amazonaws.com/zzz]
+  -h, --help                         show CLI help
+  -k, --api-key=api-key              (required) api key
+  -n, --stack-name=stack-name        (required) stack name, e.g: i-am-example-123
+
+EXAMPLES
+  $ wpom stack:info --stack-name wpom-my-awsome-site --endpoint-base https://xxx.execute-api.yyy.amazonaws.com/zzz 
+  --api-key xxxyyyzzz
+  $ npx @itinerisltd/wpom-cli stack:info --stack-name wpom-my-awsome-site --endpoint-base 
+  https://xxx.execute-api.yyy.amazonaws.com/zzz --api-key xxxyyyzzz
 ```
 
 _See code: [src/commands/stack/info.ts](https://github.com/itinerisltd/wpom/blob/v0.1.4/src/commands/stack/info.ts)_
