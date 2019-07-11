@@ -59,7 +59,7 @@
     "prepack": "rm -rf lib && tsc -b && npx @oclif/oclif-dev manifest && npx @oclif/oclif-dev readme",
     "test": "echo NO TESTS",
     "version": "npx @oclif/oclif-dev readme && git add README.md",
-    "release": "yarn version && yarn publish && github_changelog_generator && git add CHANGELOG.md && git commit -m 'github_changelog_generator' && git push origin master"
+    "release": "yarn publish && github_changelog_generator && git add CHANGELOG.md && git commit -m 'github_changelog_generator' && git push origin master"
   },
   "types": "lib/index.d.ts",
   "publishConfig": {
