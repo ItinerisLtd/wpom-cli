@@ -31,7 +31,7 @@
     "typescript": "^3.0"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": "^10.0.0"
   },
   "files": [
     "/bin",
@@ -56,10 +56,10 @@
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "tslint -p . -t stylish",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "prepack": "rm -rf lib && tsc -b && npx @oclif/oclif-dev manifest && npx @oclif/oclif-dev readme",
     "test": "echo NO TESTS",
     "version": "npx @oclif/oclif-dev readme && git add README.md",
-    "release": "npx np --any-branch && github_changelog_generator && git add CHANGELOG.md && git commit -m 'github_changelog_generator' && git push origin master"
+    "release": "npx np && github_changelog_generator && git add CHANGELOG.md && git commit -m 'github_changelog_generator' && git push origin master"
   },
   "types": "lib/index.d.ts",
   "publishConfig": {
