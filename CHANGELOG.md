@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.4](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.4) (2019-07-11)
+[Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.2...v0.2.4)
+
+**Merged pull requests:**
+
+- Version bump v0.2.3 [\#23](https://github.com/ItinerisLtd/wpom-cli/pull/23) ([TangRufus](https://github.com/TangRufus))
+
 ## [v0.2.2](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.2) (2019-07-11)
 [Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.3...v0.2.2)
 
