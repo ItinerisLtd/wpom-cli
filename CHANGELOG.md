@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.2.12](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.12) (2019-07-12)
+[Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.11...v0.2.12)
+
+**Merged pull requests:**
+
+- Pretty print json object [\#31](https://github.com/ItinerisLtd/wpom-cli/pull/31) ([TangRufus](https://github.com/TangRufus))
+- Bump arg from 4.1.0 to 4.1.1 [\#30](https://github.com/ItinerisLtd/wpom-cli/pull/30) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump @types/node from 10.14.12 to 12.6.2 [\#29](https://github.com/ItinerisLtd/wpom-cli/pull/29) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump ts-node from 7.0.1 to 8.3.0 [\#28](https://github.com/ItinerisLtd/wpom-cli/pull/28) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump cli-ux from 4.9.3 to 5.3.1 [\#27](https://github.com/ItinerisLtd/wpom-cli/pull/27) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump @oclif/config from 1.13.1 to 1.13.2 [\#26](https://github.com/ItinerisLtd/wpom-cli/pull/26) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
 ## [v0.2.11](https://github.com/ItinerisLtd/wpom-cli/tree/v0.2.11) (2019-07-11)
 [Full Changelog](https://github.com/ItinerisLtd/wpom-cli/compare/v0.2.10...v0.2.11)
 
