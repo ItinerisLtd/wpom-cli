@@ -60,7 +60,7 @@ export default class Create extends Command {
         title: 'Create ProductionIAMUser access key',
         task: async ctx => {
           const accessKey = await createAccessKey(endpointBase, ctx.stackName, 'ProductionIAMUser', apiKey)
-          result.production = {
+          result.productionIAMUser = {
             accessKey,
           }
         }
@@ -69,7 +69,7 @@ export default class Create extends Command {
         title: 'Create StagingIAMUser access key',
         task: async ctx => {
           const accessKey = await createAccessKey(endpointBase, ctx.stackName, 'StagingIAMUser', apiKey)
-          result.staging = {
+          result.stagingIAMUser = {
             accessKey,
           }
         }
@@ -77,7 +77,9 @@ export default class Create extends Command {
     ])
 
     tasks.run().then(() => {
-      this.log(result)
+      this.log(
+        JSON.stringify(result, null, 2)
+      )
     }).catch((err: Error) => {
       this.error(err.message, {exit: 1})
     })
