@@ -23,7 +23,7 @@
     "@types/chai": "^4",
     "@types/listr": "^0.14.0",
     "@types/mocha": "^5",
-    "@types/node": "^10",
+    "@types/node": "^12",
     "@types/node-fetch": "^2.1.4",
     "globby": "^10",
     "ts-node": "^8",
